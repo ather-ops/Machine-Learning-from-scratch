@@ -1,0 +1,131 @@
+import pandas as pd
+import numpy as np
+from matplotlib import pyplot as plt
+
+print("="*90)
+print("          LINEAR REGRESSION FROM SCRATCH — BY ATHER (SELF-TAUGHT ML ENGINEER)")
+print("="*90)
+
+# ---------------------------------------------------------
+# 1. Dataset
+# ---------------------------------------------------------
+data = {
+    "X": [1,2,3,4,5,6,7,8,9,10],      # Hours
+    "Y": [22,25,36,78,56,90,45,89,97,100]  # Marks
+}
+
+df = pd.DataFrame(data)
+print("\nOriginal Dataset:\n", df)
+print("="*90)
+
+# ---------------------------------------------------------
+# 2. Basic Summations
+# ---------------------------------------------------------
+sum_X = df["X"].sum()
+sum_Y = df["Y"].sum()
+n = len(df)
+
+df["XY"] = df["X"] * df["Y"]
+df["X2"] = df["X"] ** 2
+
+sum_XY = df["XY"].sum()
+sum_X2 = df["X2"].sum()
+
+print("Dataset with XY and X² Columns:\n", df)
+print("="*90)
+
+# ---------------------------------------------------------
+# 3. Manual Formula for Slope (m) and Intercept (b)
+# ---------------------------------------------------------
+m = (n * sum_XY - (sum_X * sum_Y)) / (n * sum_X2 - (sum_X ** 2))
+b = (sum_Y - m * sum_X) / n
+
+print(f"Initial Slope (m): {m}")
+print(f"Initial Intercept (b): {b}")
+print("="*90)
+
+# ---------------------------------------------------------
+# 4. Predicting Y
+# ---------------------------------------------------------
+df["Y_pred"] = m * df["X"] + b
+
+plt.scatter(df["X"], df["Y"], label="Actual", color="red")
+plt.plot(df["X"], df["Y_pred"], label="Predicted", color="green")
+plt.title("Linear Regression (Manual)")
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# ---------------------------------------------------------
+# 5. Error Calculations
+# ---------------------------------------------------------
+df["error"] = df["Y_pred"] - df["Y"]
+df["squared_error"] = df["error"] ** 2
+df["error*X"] = df["error"] * df["X"]
+
+MSE = df["squared_error"].mean()
+RMSE = np.sqrt(MSE)
+MAE = abs(df["error"]).mean()
+
+print("Error Metrics:")
+print(f"MSE  = {MSE}")
+print(f"RMSE = {RMSE}")
+print(f"MAE  = {MAE}")
+print("="*90)
+
+# ---------------------------------------------------------
+# 6. Gradient Descent - 1 Step
+# ---------------------------------------------------------
+gradient_m = (2/n) * df["error*X"].sum()
+gradient_b = (2/n) * df["error"].sum()
+
+print("Single-Step Gradients:")
+print(f"gradient_m = {gradient_m}")
+print(f"gradient_b = {gradient_b}")
+print("="*90)
+
+alpha = 0.01
+updated_m = m - alpha * gradient_m
+updated_b = b - alpha * gradient_b
+
+print("After One Gradient Descent Step:")
+print("Updated m =", updated_m)
+print("Updated b =", updated_b)
+print("="*90)
+
+# ---------------------------------------------------------
+# 7. Full Training Loop — Gradient Descent  (50 Iterations)
+# ---------------------------------------------------------
+X = df["X"].values
+Y = df["Y"].values
+
+loss_history = []
+
+for step in range(50):
+    y_pred = m * X + b
+    error = y_pred - Y
+    loss = (error ** 2).mean()
+    loss_history.append(loss)
+
+    gradient_m = (2/n) * np.sum(error * X)
+    gradient_b = (2/n) * np.sum(error)
+
+    m = m - alpha * gradient_m
+    b = b - alpha * gradient_b
+
+    print(f"Step {step}: Loss={loss:.4f}, m={m:.4f}, b={b:.4f}")
+
+plt.plot(loss_history)
+plt.title("Loss Curve — Training")
+plt.xlabel("Training Steps")
+plt.ylabel("Loss")
+plt.grid(True)
+plt.show()
+
+print("="*90)
+print("FINAL MODEL PARAMETERS:")
+print(f"Slope (m): {m}")
+print(f"Intercept (b): {b}")
+print("="*90)
+
+print("\nTraining Complete.\nThis project is 100% manually built by Ather — future ML Engineer.\n")
