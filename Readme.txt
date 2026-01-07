@@ -1,0 +1,15 @@
+# Student Score Prediction – Linear Regression from Scratch
+
+This project implements multi-variable linear regression from scratch using NumPy.
+The model predicts a student's final exam score based on study hours, sleep hours,
+and attendance percentage.
+
+### Key Features
+- Gradient Descent optimization
+- Mean Squared Error loss
+- Feature normalization
+- Loss convergence visualization
+- Real-world prediction example
+
+### Tech Stack
+Python, NumPy, Pandas, Matplotlib
