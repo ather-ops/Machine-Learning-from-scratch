@@ -153,4 +153,5 @@ print("1. Min-Max Scaling ✓")
 print("2. Z-Score Standardization ✓")
 print("3. Log Scaling ✓")
 print(f"\nDataset size: {df.shape[0]} samples, {df.shape[1]} features")
+
 print("All transformations applied without using sklearn!")
