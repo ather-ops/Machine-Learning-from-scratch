@@ -1,5 +1,15 @@
 🧠 Complete Machine Learning From Scratch
 
+## Technologies Used
+
+![Python](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png)
+![NumPy](https://numpy.org/images/logo.svg)
+
+## Sample Visualization
+
+![Sample Plot](https://matplotlib.org/stable/_images/sphx_glr_plot_scatter_001.png)
+
+
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![NumPy](https://img.shields.io/badge/NumPy-1.21%2B-orange)](https://numpy.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-1.3%2B-green)](https://pandas.pydata.org/)
