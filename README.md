@@ -1,5 +1,4 @@
 🧠 Complete Machine Learning From Scratch
-(![Image](https://github.com/user-attachments/assets/68febdaa-7e32-45e6-9500-fc72d1d1c7fb))
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![NumPy](https://img.shields.io/badge/NumPy-1.21%2B-orange)](https://numpy.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-1.3%2B-green)](https://pandas.pydata.org/)
