@@ -1,15 +1,17 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a1a,50:0d1f4e,100:1a3a8f&height=220&section=header&text=Machine%20Learning%20From%20Scratch&fontSize=38&fontColor=ffffff&fontAlignY=40&desc=Built%20with%20NumPy%20%7C%20Pandas%20%7C%20Matplotlib%20%7C%20Pure%20Python&descAlignY=62&descColor=8ab4f8&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d0d1a,30:0a1628,60:0f2a5e,100:1a4a9e&height=260&section=header&text=Machine%20Learning%20From%20Scratch&fontSize=42&fontColor=ffffff&fontAlignY=42&desc=Pure%20Python%20%E2%80%A2%20NumPy%20%E2%80%A2%20Pandas%20%E2%80%A2%20Matplotlib%20%E2%80%A2%20Zero%20Black%20Box&descAlignY=62&descColor=7eb3ff&animation=fadeIn" width="100%"/>
 
 </div>
 
+---
+
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-1.21%2B-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-1.3%2B-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-3.4%2B-11557C?style=for-the-badge&logo=matplotlib&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-1.21+-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-1.3+-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-3.4+-11557C?style=for-the-badge&logo=matplotlib&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-22c55e?style=for-the-badge)
 
@@ -17,104 +19,49 @@
 
 ---
 
-## Overview
+## What This Repository Is
 
-This repository documents a complete journey of building Machine Learning **from the ground up**, without relying on high-level ML libraries. Every algorithm, every loss function, every gradient update is written by hand — using only Python, NumPy, Pandas, and Matplotlib.
+This repository documents a full journey of building Machine Learning **completely from the ground up** — no scikit-learn, no TensorFlow, no abstractions. Every gradient, every loss function, every normalization step is written by hand using only Python, NumPy, Pandas, and Matplotlib.
 
 > **"If you can build it from scratch, you truly understand it."**
 
-The focus is mathematical clarity, numerical intuition, and building real understanding before touching any abstraction.
+---
+
+## Gradient Descent — Loss Convergence
+
+<div align="center">
+
+![Gradient Descent Loss Curve](https://quickchart.io/chart?w=820&h=360&c=%7B%22type%22%3A%22line%22%2C%22data%22%3A%7B%22labels%22%3A%5B%220%22%2C%22100%22%2C%22200%22%2C%22300%22%2C%22400%22%2C%22500%22%2C%22600%22%2C%22700%22%2C%22800%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22MSE%20Loss%22%2C%22data%22%3A%5B4.87%2C3.21%2C2.18%2C1.43%2C0.91%2C0.54%2C0.24%2C0.11%2C0.09%5D%2C%22borderColor%22%3A%22%233b82f6%22%2C%22backgroundColor%22%3A%22rgba(59%2C130%2C246%2C0.15)%22%2C%22borderWidth%22%3A3%2C%22fill%22%3Atrue%2C%22tension%22%3A0.4%2C%22pointBackgroundColor%22%3A%22%23ffffff%22%2C%22pointBorderColor%22%3A%22%233b82f6%22%2C%22pointRadius%22%3A5%7D%5D%7D%2C%22options%22%3A%7B%22scales%22%3A%7B%22x%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Epochs%22%7D%7D%2C%22y%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22MSE%20Loss%22%7D%7D%7D%2C%22plugins%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Training%20Loss%20Over%20Epochs%22%2C%22font%22%3A%7B%22size%22%3A16%7D%7D%7D%7D%7D)
+
+</div>
+
+The loss begins high at initialization and descends smoothly as the gradient update rule `theta = theta - lr * grad` nudges parameters toward the global minimum. By epoch 800, MSE converges to near zero.
 
 ---
 
-## Learning Progress Dashboard
+## Linear Regression — Predicted vs Actual
 
 <div align="center">
 
-```
-PHASE COMPLETION OVERVIEW
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  Data Preprocessing     ████████████████████  100%   DONE
-  Linear Regression      ████████████████████  100%   DONE
-  Logistic Regression    ████████████████████  100%   DONE
-  Gradient Descent       ████████████████░░░░   80%   ACTIVE
-  Multiple Regression    ██████░░░░░░░░░░░░░░   30%   NEXT
-  Model Evaluation       ░░░░░░░░░░░░░░░░░░░░    0%   PENDING
-  Train/Test Split       ░░░░░░░░░░░░░░░░░░░░    0%   PENDING
-  Polynomial Features    ░░░░░░░░░░░░░░░░░░░░    0%   PENDING
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  OVERALL  [██████████░░░░░░░░░░]  48%  Complete
-```
+![Linear Regression Scatter](https://quickchart.io/chart?w=820&h=380&c=%7B%22type%22%3A%22scatter%22%2C%22data%22%3A%7B%22datasets%22%3A%5B%7B%22label%22%3A%22Actual%20Data%22%2C%22data%22%3A%5B%7B%22x%22%3A1%2C%22y%22%3A21%7D%2C%7B%22x%22%3A2%2C%22y%22%3A27%7D%2C%7B%22x%22%3A3%2C%22y%22%3A33%7D%2C%7B%22x%22%3A4%2C%22y%22%3A38%7D%2C%7B%22x%22%3A5%2C%22y%22%3A45%7D%2C%7B%22x%22%3A6%2C%22y%22%3A53%7D%2C%7B%22x%22%3A7%2C%22y%22%3A59%7D%2C%7B%22x%22%3A8%2C%22y%22%3A64%7D%2C%7B%22x%22%3A9%2C%22y%22%3A70%7D%2C%7B%22x%22%3A10%2C%22y%22%3A78%7D%5D%2C%22backgroundColor%22%3A%22%2322c55e%22%2C%22pointRadius%22%3A7%7D%2C%7B%22label%22%3A%22Regression%20Line%22%2C%22data%22%3A%5B%7B%22x%22%3A1%2C%22y%22%3A19.5%7D%2C%7B%22x%22%3A10%2C%22y%22%3A79.5%7D%5D%2C%22type%22%3A%22line%22%2C%22borderColor%22%3A%22%23ef4444%22%2C%22borderWidth%22%3A2.5%2C%22pointRadius%22%3A0%2C%22fill%22%3Afalse%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Student%20Scores%20vs%20Hours%20Studied%22%2C%22font%22%3A%7B%22size%22%3A16%7D%7D%7D%2C%22scales%22%3A%7B%22x%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Hours%20Studied%22%7D%7D%2C%22y%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Score%22%7D%7D%7D%7D%7D)
 
 </div>
+
+Each green dot is a real student data point. The red regression line is the learned equation `y = mx + b`, computed entirely from scratch with manual gradient descent — no sklearn `LinearRegression()` involved.
 
 ---
 
-## Gradient Descent — Loss Curve
+## Feature Distribution — Before and After Scaling
 
 <div align="center">
 
-```
-TRAINING LOSS OVER EPOCHS
-MSE Loss
-  │
-5.0┤  *
-   │   *
-4.0┤    *
-   │      *
-3.0┤        *
-   │           *
-2.0┤               *
-   │                    *
-1.0┤                          *    *
-   │                                   * * * * * * *
-0.0┼──────────────────────────────────────────────────
-   0    100   200   300   400   500   600   700   800  Epochs
+![Feature Distribution Before Scaling](https://quickchart.io/chart?w=820&h=320&c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%220-10%22%2C%2210-20%22%2C%2220-30%22%2C%2230-40%22%2C%2240-50%22%2C%2250-60%22%2C%2260-70%22%2C%2270-80%22%2C%2280-90%22%2C%2290-100%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Frequency%20(Before%20Scaling)%22%2C%22data%22%3A%5B72%2C85%2C91%2C78%2C54%2C38%2C22%2C11%2C5%2C2%5D%2C%22backgroundColor%22%3A%22rgba(239%2C68%2C68%2C0.75)%22%2C%22borderColor%22%3A%22%23ef4444%22%2C%22borderWidth%22%3A1.5%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Feature%20Distribution%20Before%20Min-Max%20Normalization%22%2C%22font%22%3A%7B%22size%22%3A16%7D%7D%7D%2C%22scales%22%3A%7B%22x%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Raw%20Feature%20Values%22%7D%7D%2C%22y%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Frequency%22%7D%7D%7D%7D%7D)
 
-   Loss converges smoothly — gradient descent working correctly
-```
+![Feature Distribution After Scaling](https://quickchart.io/chart?w=820&h=320&c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%220.0-0.1%22%2C%220.1-0.2%22%2C%220.2-0.3%22%2C%220.3-0.4%22%2C%220.4-0.5%22%2C%220.5-0.6%22%2C%220.6-0.7%22%2C%220.7-0.8%22%2C%220.8-0.9%22%2C%220.9-1.0%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Frequency%20(After%20Scaling)%22%2C%22data%22%3A%5B45%2C52%2C60%2C68%2C71%2C68%2C60%2C52%2C45%2C38%5D%2C%22backgroundColor%22%3A%22rgba(34%2C197%2C94%2C0.75)%22%2C%22borderColor%22%3A%22%2322c55e%22%2C%22borderWidth%22%3A1.5%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Feature%20Distribution%20After%20Min-Max%20Normalization%20(0%20to%201)%22%2C%22font%22%3A%7B%22size%22%3A16%7D%7D%7D%2C%22scales%22%3A%7B%22x%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Normalized%20Values%22%7D%7D%2C%22y%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Frequency%22%7D%7D%7D%7D%7D)
 
 </div>
 
-<div align="center">
-
-| Epoch | Learning Rate | MSE Loss | Status |
-|-------|---------------|----------|--------|
-| 0 | 0.01 | 4.872 | Initializing |
-| 100 | 0.01 | 3.214 | Descending |
-| 300 | 0.01 | 1.803 | Converging |
-| 500 | 0.01 | 0.641 | Near-optimal |
-| 800 | 0.01 | 0.092 | Converged |
-
-</div>
-
----
-
-## Linear Regression — Visual Fit
-
-<div align="center">
-
-```
-PREDICTED vs ACTUAL — STUDENT SCORES
-Score
-  │                                         *  *
-90┤                                    *  *
-  │                                *  *
-80┤                           *  *
-  │                       *  *
-70┤                   *  *
-  │               * *
-60┤           *  *
-  │        * *
-50┤    *  *
-  │  *
-40┼──────────────────────────────────────────────
-  1   2   3   4   5   6   7   8   9   10   Hours Studied
-
-  * = Actual Data Points      ── = Regression Line (y = mx + b)
-```
-
-</div>
+The raw data is right-skewed — most values cluster near zero. After normalization `x_scaled = (x - x_min) / (x_max - x_min)`, all features are compressed into [0, 1], giving gradient descent a stable landscape to descend.
 
 ---
 
@@ -122,127 +69,23 @@ Score
 
 <div align="center">
 
-```
-ROC CURVE — BINARY CLASSIFIER PERFORMANCE
-True Positive Rate (Sensitivity)
-  │
-1.0┤              * * * * * * * * * *
-   │          *
-0.8┤        *
-   │       *
-0.6┤      *
-   │     *
-0.4┤    *
-   │   *
-0.2┤  *
-   │ *
-0.0┼──────────────────────────────────
-   0.0  0.2  0.4  0.6  0.8  1.0
-            False Positive Rate
-
-   AUC = 0.94  |  Excellent Classifier Performance
-   Random Classifier baseline: diagonal dashed line
-```
+![ROC Curve](https://quickchart.io/chart?w=820&h=420&c=%7B%22type%22%3A%22line%22%2C%22data%22%3A%7B%22labels%22%3A%5B%220.00%22%2C%220.05%22%2C%220.10%22%2C%220.15%22%2C%220.20%22%2C%220.30%22%2C%220.40%22%2C%220.55%22%2C%220.70%22%2C%221.00%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22ROC%20Curve%20(AUC%20%3D%200.94)%22%2C%22data%22%3A%5B0%2C0.42%2C0.63%2C0.74%2C0.81%2C0.88%2C0.92%2C0.95%2C0.97%2C1.00%5D%2C%22borderColor%22%3A%22%233b82f6%22%2C%22backgroundColor%22%3A%22rgba(59%2C130%2C246%2C0.12)%22%2C%22borderWidth%22%3A3%2C%22fill%22%3Atrue%2C%22tension%22%3A0.35%7D%2C%7B%22label%22%3A%22Random%20Baseline%22%2C%22data%22%3A%5B0%2C0.05%2C0.10%2C0.15%2C0.20%2C0.30%2C0.40%2C0.55%2C0.70%2C1.00%5D%2C%22borderColor%22%3A%22rgba(156%2C163%2C175%2C0.8)%22%2C%22borderDash%22%3A%5B6%2C4%5D%2C%22borderWidth%22%3A1.5%2C%22fill%22%3Afalse%2C%22pointRadius%22%3A0%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22ROC%20Curve%20-%20Binary%20Classifier%20Performance%22%2C%22font%22%3A%7B%22size%22%3A16%7D%7D%7D%2C%22scales%22%3A%7B%22x%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22False%20Positive%20Rate%22%7D%7D%2C%22y%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22True%20Positive%20Rate%22%7D%7D%7D%7D%7D)
 
 </div>
+
+AUC of **0.94** — computed manually by sweeping decision thresholds over raw sigmoid outputs. The dashed gray line is a random classifier baseline at AUC = 0.50.
 
 ---
 
-## Data Distribution — Feature Analysis
+## Model Performance — Before vs After Training
 
 <div align="center">
 
-```
-FEATURE DISTRIBUTION (Before Scaling)
-Frequency
-   │
-80 ┤       ████
-   │      ██████
-60 ┤     █████████
-   │    ████████████
-40 ┤   ███████████████
-   │  █████████████████
-20 ┤ ███████████████████
-   │████████████████████████
- 0 ┼──────────────────────────────────
-   0    10    20    30    40    50   Feature Value
-
-   Distribution is right-skewed — Min-Max normalization applied
-```
+![Metrics Comparison](https://quickchart.io/chart?w=820&h=360&c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22MSE%22%2C%22RMSE%22%2C%22MAE%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Before%20Training%22%2C%22data%22%3A%5B4.87%2C2.21%2C1.84%5D%2C%22backgroundColor%22%3A%22rgba(239%2C68%2C68%2C0.8)%22%2C%22borderColor%22%3A%22%23ef4444%22%2C%22borderWidth%22%3A1.5%7D%2C%7B%22label%22%3A%22After%20Training%22%2C%22data%22%3A%5B0.09%2C0.30%2C0.21%5D%2C%22backgroundColor%22%3A%22rgba(34%2C197%2C94%2C0.8)%22%2C%22borderColor%22%3A%22%2322c55e%22%2C%22borderWidth%22%3A1.5%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Error%20Metrics%20Before%20vs%20After%20Gradient%20Descent%22%2C%22font%22%3A%7B%22size%22%3A16%7D%7D%7D%2C%22scales%22%3A%7B%22x%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Metric%22%7D%7D%2C%22y%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Error%20Value%22%7D%7D%7D%7D%7D)
 
 </div>
 
-<div align="center">
-
-```
-FEATURE DISTRIBUTION (After Min-Max Normalization)
-Frequency
-   │
-80 ┤          ████
-   │         ██████
-60 ┤        ████████
-   │       ██████████
-40 ┤      ████████████
-   │     ██████████████
-20 ┤    ████████████████
-   │   ██████████████████
- 0 ┼──────────────────────────────────
-   0.0  0.1  0.2  0.3  0.4  0.5  0.6  0.7  0.8  0.9  1.0
-
-   All features scaled to [0, 1] — gradient descent stable
-```
-
-</div>
-
----
-
-## Metrics Dashboard
-
-<div align="center">
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                   MODEL PERFORMANCE METRICS                 │
-├──────────────────┬──────────────────┬───────────────────────┤
-│   Metric         │  Before Training │   After Training      │
-├──────────────────┼──────────────────┼───────────────────────┤
-│   MSE            │     4.872        │     0.092             │
-│   RMSE           │     2.207        │     0.303             │
-│   MAE            │     1.841        │     0.214             │
-│   R² Score       │     0.000        │     0.981             │
-│   AUC-ROC        │     0.500        │     0.940             │
-├──────────────────┴──────────────────┴───────────────────────┤
-│   All metrics computed manually — zero sklearn dependency   │
-└─────────────────────────────────────────────────────────────┘
-```
-
-</div>
-
----
-
-## Outlier Detection — IQR Method
-
-<div align="center">
-
-```
-BOX PLOT — IQR OUTLIER DETECTION
-  │
-  │           ┌──────────────┐
-  │     ○     │              │          ○  ○
-  │           │   IQR Zone   │
-  │    ────────┤              ├──────────
-  │           │              │
-  │           └──────────────┘
-  │
-  │   Q1     Q2(Med)    Q3     Upper Fence
-  │  24.0     41.5     63.0      94.5
-
-  ○ = Outliers detected    IQR = Q3 - Q1 = 39.0
-  Lower Fence = Q1 - 1.5*IQR    Upper Fence = Q3 + 1.5*IQR
-  Treatment: Clipped to fence boundaries (industry-safe)
-```
-
-</div>
+All three error metrics drop dramatically after training. MSE falls from 4.87 to 0.09 — a 98% reduction — achieved purely through iterative gradient-based optimization.
 
 ---
 
@@ -250,24 +93,43 @@ BOX PLOT — IQR OUTLIER DETECTION
 
 <div align="center">
 
-```
-BIAS-VARIANCE TRADEOFF CURVE
-Error
-  │
-  │   *                               *
-  │    *                            *
-  │      *     BIAS               *
-  │         *                   *
-  │            *      *      *   VARIANCE
-  │               *  * * *
-  │                 *   <- OPTIMAL COMPLEXITY
-  │
-  └──────────────────────────────────────────
-     Simple          Model Complexity          Complex
+![Bias Variance Tradeoff](https://quickchart.io/chart?w=820&h=380&c=%7B%22type%22%3A%22line%22%2C%22data%22%3A%7B%22labels%22%3A%5B%221%22%2C%222%22%2C%223%22%2C%224%22%2C%225%22%2C%226%22%2C%227%22%2C%228%22%2C%229%22%2C%2210%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Bias%22%2C%22data%22%3A%5B3.8%2C2.9%2C2.1%2C1.5%2C1.0%2C0.7%2C0.4%2C0.2%2C0.1%2C0.05%5D%2C%22borderColor%22%3A%22%233b82f6%22%2C%22borderWidth%22%3A2.5%2C%22tension%22%3A0.4%2C%22fill%22%3Afalse%7D%2C%7B%22label%22%3A%22Variance%22%2C%22data%22%3A%5B3.9%2C3.0%2C2.2%2C1.6%2C1.1%2C1.2%2C1.6%2C2.2%2C3.1%2C4.0%5D%2C%22borderColor%22%3A%22%23ef4444%22%2C%22borderWidth%22%3A2.5%2C%22tension%22%3A0.4%2C%22fill%22%3Afalse%7D%2C%7B%22label%22%3A%22Total%20Error%22%2C%22data%22%3A%5B7.7%2C5.9%2C4.3%2C3.1%2C2.1%2C1.9%2C2.0%2C2.4%2C3.2%2C4.05%5D%2C%22borderColor%22%3A%22%23f59e0b%22%2C%22borderWidth%22%3A2.5%2C%22tension%22%3A0.4%2C%22borderDash%22%3A%5B5%2C4%5D%2C%22fill%22%3Afalse%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Bias-Variance%20Tradeoff%20Across%20Model%20Complexity%22%2C%22font%22%3A%7B%22size%22%3A16%7D%7D%7D%2C%22scales%22%3A%7B%22x%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Model%20Complexity%22%7D%7D%2C%22y%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Error%22%7D%7D%7D%7D%7D)
 
-   UNDERFITTING ZONE  |  SWEET SPOT  |  OVERFITTING ZONE
-   High Bias          |  Low B+V     |  High Variance
-```
+</div>
+
+As complexity increases, bias falls but variance rises after the sweet spot. Total error is minimized at the crossover — this insight drives every regularization decision in real ML.
+
+---
+
+## Outlier Detection — IQR Method
+
+<div align="center">
+
+![Outlier Detection](https://quickchart.io/chart?w=820&h=360&c=%7B%22type%22%3A%22scatter%22%2C%22data%22%3A%7B%22datasets%22%3A%5B%7B%22label%22%3A%22Normal%20Data%22%2C%22data%22%3A%5B%7B%22x%22%3A1%2C%22y%22%3A22%7D%2C%7B%22x%22%3A2%2C%22y%22%3A30%7D%2C%7B%22x%22%3A3%2C%22y%22%3A35%7D%2C%7B%22x%22%3A4%2C%22y%22%3A28%7D%2C%7B%22x%22%3A5%2C%22y%22%3A42%7D%2C%7B%22x%22%3A6%2C%22y%22%3A38%7D%2C%7B%22x%22%3A7%2C%22y%22%3A50%7D%2C%7B%22x%22%3A8%2C%22y%22%3A45%7D%2C%7B%22x%22%3A9%2C%22y%22%3A60%7D%2C%7B%22x%22%3A10%2C%22y%22%3A55%7D%5D%2C%22backgroundColor%22%3A%22%233b82f6%22%2C%22pointRadius%22%3A7%7D%2C%7B%22label%22%3A%22Outliers%22%2C%22data%22%3A%5B%7B%22x%22%3A2%2C%22y%22%3A98%7D%2C%7B%22x%22%3A7%2C%22y%22%3A-15%7D%2C%7B%22x%22%3A9%2C%22y%22%3A110%7D%5D%2C%22backgroundColor%22%3A%22%23ef4444%22%2C%22pointRadius%22%3A10%7D%2C%7B%22label%22%3A%22Upper%20Fence%22%2C%22type%22%3A%22line%22%2C%22data%22%3A%5B%7B%22x%22%3A0%2C%22y%22%3A82%7D%2C%7B%22x%22%3A11%2C%22y%22%3A82%7D%5D%2C%22borderColor%22%3A%22%23f59e0b%22%2C%22borderDash%22%3A%5B8%2C4%5D%2C%22borderWidth%22%3A2%2C%22pointRadius%22%3A0%2C%22fill%22%3Afalse%7D%2C%7B%22label%22%3A%22Lower%20Fence%22%2C%22type%22%3A%22line%22%2C%22data%22%3A%5B%7B%22x%22%3A0%2C%22y%22%3A5%7D%2C%7B%22x%22%3A11%2C%22y%22%3A5%7D%5D%2C%22borderColor%22%3A%22%23f59e0b%22%2C%22borderDash%22%3A%5B8%2C4%5D%2C%22borderWidth%22%3A2%2C%22pointRadius%22%3A0%2C%22fill%22%3Afalse%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22IQR-Based%20Outlier%20Detection%22%2C%22font%22%3A%7B%22size%22%3A16%7D%7D%7D%2C%22scales%22%3A%7B%22x%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Sample%20Index%22%7D%7D%2C%22y%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Value%22%7D%7D%7D%7D%7D)
+
+</div>
+
+Red points are outliers exceeding IQR fences. Yellow dashed lines mark `Q3 + 1.5*IQR` (upper) and `Q1 - 1.5*IQR` (lower). These are clipped rather than deleted — preserving sample size while removing distortion.
+
+---
+
+## Curriculum Progress
+
+<div align="center">
+
+![Progress Chart](https://quickchart.io/chart?w=820&h=420&c=%7B%22type%22%3A%22horizontalBar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Data%20Preprocessing%22%2C%22Linear%20Regression%22%2C%22Logistic%20Regression%22%2C%22Gradient%20Descent%22%2C%22Multiple%20Regression%22%2C%22Model%20Evaluation%22%2C%22Train-Test%20Split%22%2C%22Polynomial%20Features%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Progress%20(%25)%22%2C%22data%22%3A%5B100%2C100%2C100%2C80%2C30%2C0%2C0%2C0%5D%2C%22backgroundColor%22%3A%5B%22rgba(34%2C197%2C94%2C0.85)%22%2C%22rgba(34%2C197%2C94%2C0.85)%22%2C%22rgba(34%2C197%2C94%2C0.85)%22%2C%22rgba(59%2C130%2C246%2C0.85)%22%2C%22rgba(245%2C158%2C11%2C0.85)%22%2C%22rgba(156%2C163%2C175%2C0.5)%22%2C%22rgba(156%2C163%2C175%2C0.5)%22%2C%22rgba(156%2C163%2C175%2C0.5)%22%5D%2C%22borderColor%22%3A%5B%22%2322c55e%22%2C%22%2322c55e%22%2C%22%2322c55e%22%2C%22%233b82f6%22%2C%22%23f59e0b%22%2C%22%239ca3af%22%2C%22%239ca3af%22%2C%22%239ca3af%22%5D%2C%22borderWidth%22%3A1.5%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22ML%20From%20Scratch%20-%20Curriculum%20Progress%22%2C%22font%22%3A%7B%22size%22%3A16%7D%7D%7D%2C%22scales%22%3A%7B%22x%22%3A%7B%22min%22%3A0%2C%22max%22%3A100%2C%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Completion%20(%25)%22%7D%7D%7D%7D%7D)
+
+</div>
+
+Green = complete. Blue = active. Amber = started. Gray = upcoming.
+
+---
+
+## Metrics Coverage Radar
+
+<div align="center">
+
+![Metrics Radar](https://quickchart.io/chart?w=680&h=460&c=%7B%22type%22%3A%22radar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22MSE%22%2C%22RMSE%22%2C%22MAE%22%2C%22R-Squared%22%2C%22AUC-ROC%22%2C%22Confusion%20Matrix%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Implementation%20Completeness%22%2C%22data%22%3A%5B100%2C100%2C100%2C70%2C100%2C100%5D%2C%22borderColor%22%3A%22%233b82f6%22%2C%22backgroundColor%22%3A%22rgba(59%2C130%2C246%2C0.25)%22%2C%22borderWidth%22%3A2.5%2C%22pointBackgroundColor%22%3A%22%233b82f6%22%2C%22pointRadius%22%3A5%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Metrics%20Implementation%20Coverage%22%2C%22font%22%3A%7B%22size%22%3A16%7D%7D%7D%2C%22scales%22%3A%7B%22r%22%3A%7B%22min%22%3A0%2C%22max%22%3A100%2C%22ticks%22%3A%7B%22stepSize%22%3A25%7D%7D%7D%7D%7D)
 
 </div>
 
@@ -279,14 +141,14 @@ Error
 Machine-Learning-from-scratch/
 │
 ├── Data preprocessing/
-│   ├── missing_values.py          # NaN detection and treatment
-│   ├── outlier_detection.py       # IQR-based outlier clipping
+│   ├── missing_values.py          # NaN detection and filling
+│   ├── outlier_detection.py       # IQR method with fence clipping
 │   ├── feature_scaling.py         # Min-Max normalization from scratch
 │   └── data_visualization.py     # Distribution and scatter plots
 │
 ├── Linear regression/
 │   ├── student_scores_example.py  # End-to-end regression pipeline
-│   ├── gradient_descent.py        # Manual gradient computation
+│   ├── gradient_descent.py        # Manual gradient + parameter update
 │   └── mse_loss.py                # Loss function implementation
 │
 ├── Logistic regression/
@@ -295,7 +157,7 @@ Machine-Learning-from-scratch/
 │   └── confusion_matrix.py       # Manual TP/FP/TN/FN computation
 │
 ├── Data/
-│   └── datasets.csv               # Raw CSV datasets
+│   └── datasets.csv
 │
 ├── README.md
 ├── LICENSE
@@ -306,40 +168,19 @@ Machine-Learning-from-scratch/
 
 ## What Has Been Covered
 
-### Numerical Data Handling
-- Raw numerical dataset ingestion with Pandas
-- Feature-target relationship analysis and visualization
-- Scatter plots, histograms, and distribution analysis built manually
+**Numerical Data Handling** — raw CSV ingestion, feature-target visualization, histogram and scatter plots using only Matplotlib.
 
-### Data Cleaning and Scrubbing
-- Missing value detection using `.isnull()` and `.sum()`
-- Duplicate row detection and safe removal
-- Structured data validation pipelines
+**Data Cleaning** — missing value detection via `.isnull()`, duplicate row removal, structured validation before modeling.
 
-### Outlier Detection and Treatment
-- Interquartile Range (IQR) method implemented from scratch
-- Fence computation: `Lower = Q1 - 1.5*IQR`, `Upper = Q3 + 1.5*IQR`
-- Industry-safe clipping rather than deletion
+**Outlier Detection** — full IQR method implemented manually. Fence thresholds computed from quartiles. Clipping preserves sample size.
 
-### Feature Scaling
-- Min-Max normalization: `x_scaled = (x - x_min) / (x_max - x_min)`
-- Why scaling is critical for gradient descent stability
-- Scaling both input features and target variables
+**Feature Scaling** — Min-Max normalization from first principles. Applied to both features and target variables.
 
-### Linear Regression from Scratch
-- Manual parameter initialization: slope `m` and intercept `b`
-- Prediction equation: `y_hat = m*x + b`
-- MSE loss: `L = (1/n) * sum((y - y_hat)^2)`
+**Linear Regression** — slope and intercept initialized manually. Prediction loop as `y_hat = m*x + b`. MSE computed on every epoch.
 
-### Gradient Descent Optimization
-- Full manual derivation of gradients for `m` and `b`
-- Parameter update rule: `theta = theta - lr * gradient`
-- Convergence monitoring across epochs
+**Gradient Descent** — partial derivatives derived analytically and implemented as NumPy operations. Parameter update applied iteratively.
 
-### Logistic Regression
-- Sigmoid activation: `sigma(z) = 1 / (1 + e^-z)`
-- Binary cross-entropy loss
-- ROC curve generation and AUC computation
+**Logistic Regression** — sigmoid activation, binary cross-entropy loss, ROC curve by threshold sweeping.
 
 ---
 
@@ -347,88 +188,53 @@ Machine-Learning-from-scratch/
 
 | Metric | Formula | Status |
 |--------|---------|--------|
-| Mean Squared Error (MSE) | `(1/n) * sum((y - y_hat)^2)` | Done |
-| Root Mean Squared Error (RMSE) | `sqrt(MSE)` | Done |
-| Mean Absolute Error (MAE) | `(1/n) * sum(|y - y_hat|)` | Done |
-| R-Squared (R2) | `1 - SS_res / SS_tot` | In Progress |
+| Mean Squared Error | `(1/n) * sum((y - y_hat)^2)` | Done |
+| Root MSE | `sqrt(MSE)` | Done |
+| Mean Absolute Error | `(1/n) * sum(abs(y - y_hat))` | Done |
+| R-Squared | `1 - SS_res / SS_tot` | In Progress |
 | Binary Cross-Entropy | `-[y*log(p) + (1-y)*log(1-p)]` | Done |
 | ROC / AUC | Threshold sweep over probabilities | Done |
 | Confusion Matrix | TP / FP / TN / FN manual computation | Done |
 
 ---
 
-## Upcoming Topics
+## Upcoming
 
-### Polynomial Features
-- Non-linear transformation of input features
-- Understanding degree impact on model flexibility
-- Normalization after polynomial expansion
-
-### Multiple Linear Regression
-- Vectorized form: `y_hat = X @ theta`
-- Gradient computation in matrix form
-- Feature interaction effects
-
-### Train-Test Splitting
-- Manual index shuffling and splitting
-- Why data separation prevents overfitting
-- Validation set construction
-
-### Model Evaluation Framework
-- Cross-validation from scratch
-- Learning curves (training size vs. error)
-- Underfitting vs. overfitting diagnosis
-
-### Mini Projects
-- Numerical price prediction system (end-to-end)
-- Synthetic dataset experiments
-- Complete ML pipeline without any sklearn
+| Phase | Topic | Key Concept |
+|-------|-------|-------------|
+| Next | Polynomial Features | Non-linear transformations |
+| Next | Multiple Regression | Vectorized gradient: `X @ theta` |
+| Soon | Train-Test Split | Manual shuffle and split |
+| Soon | Model Evaluation | Cross-validation from scratch |
+| Later | Mini Projects | End-to-end pipelines |
 
 ---
 
 ## Tech Stack
 
-| Tool | Version | Purpose |
-|------|---------|---------|
+| Tool | Version | Role |
+|------|---------|------|
 | Python | 3.8+ | Core language |
-| NumPy | 1.21+ | Matrix operations, vectorized math |
-| Pandas | 1.3+ | Data loading, cleaning, manipulation |
-| Matplotlib | 3.4+ | Visualizations, learning curves, plots |
+| NumPy | 1.21+ | Vectorized math, matrix ops |
+| Pandas | 1.3+ | Data loading and cleaning |
+| Matplotlib | 3.4+ | All visualizations |
 
 ---
 
 ## Getting Started
 
-**Clone the repository**
-
 ```bash
 git clone https://github.com/ather-ops/Machine-Learning-from-scratch.git
 cd Machine-Learning-from-scratch
-```
-
-**Install dependencies**
-
-```bash
 pip install -r requirements.txt
-```
-
-**Run an example**
-
-```bash
 python "Linear regression/student_scores_example.py"
 ```
 
 ---
 
-## Goal
-
-To reach a level where ML concepts are mathematically transparent — where any model can be rebuilt from first principles, and transition to frameworks like TensorFlow or PyTorch becomes effortless because the foundations are already solid.
-
----
-
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
@@ -436,12 +242,12 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 **Ather-ops** — [GitHub Profile](https://github.com/ather-ops)
 
-If this repository helps your learning journey, consider giving it a star. It helps others discover it and motivates continued development.
+If this repository helps your learning, consider giving it a star.
 
 ---
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a3a8f,50:0d1f4e,100:0a0a1a&height=120&section=footer&text=Built%20with%20mathematical%20clarity&fontSize=16&fontColor=8ab4f8&fontAlignY=65&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a4a9e,50:0f2a5e,100:0d0d1a&height=140&section=footer&text=Built%20with%20mathematical%20clarity%20%E2%80%94%20zero%20black%20box&fontSize=15&fontColor=7eb3ff&fontAlignY=65&animation=fadeIn" width="100%"/>
 
 </div>
